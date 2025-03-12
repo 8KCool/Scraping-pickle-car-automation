@@ -37,3 +37,188 @@
 2025-03-12 02:33:35,652 - INFO - Get LATEST chromedriver version for google-chrome
 2025-03-12 02:33:36,756 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
 2025-03-12 02:34:36,049 - INFO - Found 0 new car listings.
+2025-03-12 04:17:14,575 - INFO - ====== WebDriver manager ======
+2025-03-12 04:17:15,957 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:17:17,345 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:17:18,446 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:17:52,615 - ERROR - Error loading data from S3: An error occurred (404) when calling the GetObject operation: Not Found
+2025-03-12 04:18:25,185 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:18:26,176 - ERROR - Error saving data to S3: An error occurred (404) when calling the PutObject operation: Not Found
+2025-03-12 04:18:26,177 - INFO - Found 102 new car listings.
+2025-03-12 04:19:39,475 - INFO - ====== WebDriver manager ======
+2025-03-12 04:19:40,774 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:19:41,892 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:19:42,997 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:20:13,997 - ERROR - Error loading data from S3: An error occurred (404) when calling the GetObject operation: Not Found
+2025-03-12 04:20:43,401 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:20:44,367 - ERROR - Error saving data to S3: An error occurred (404) when calling the PutObject operation: Not Found
+2025-03-12 04:20:44,367 - INFO - Found 79 new car listings.
+2025-03-12 04:21:31,178 - INFO - ====== WebDriver manager ======
+2025-03-12 04:21:32,466 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:21:33,623 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:21:34,747 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:22:05,897 - ERROR - Error loading data from S3: An error occurred (404) when calling the GetObject operation: Not Found
+2025-03-12 04:22:36,165 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:22:37,023 - ERROR - Error saving data to S3: An error occurred (404) when calling the PutObject operation: Not Found
+2025-03-12 04:22:37,023 - INFO - Found 72 new car listings.
+2025-03-12 04:24:30,646 - INFO - ====== WebDriver manager ======
+2025-03-12 04:24:31,924 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:24:33,043 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:24:34,147 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:25:05,973 - ERROR - Error loading data from S3: An error occurred (404) when calling the GetObject operation: Not Found
+2025-03-12 04:25:36,414 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:25:37,281 - ERROR - Error saving data to S3: An error occurred (404) when calling the PutObject operation: Not Found
+2025-03-12 04:25:37,282 - INFO - Found 102 new car listings.
+2025-03-12 04:27:15,329 - INFO - ====== WebDriver manager ======
+2025-03-12 04:27:16,587 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:27:17,705 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:27:18,809 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:27:52,295 - INFO - No previous data found in S3: filter1.json
+2025-03-12 04:28:25,380 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:28:27,693 - INFO - Found 120 new car listings.
+2025-03-12 04:28:52,899 - INFO - ====== WebDriver manager ======
+2025-03-12 04:28:54,141 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:28:55,260 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:28:56,371 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:31:10,569 - INFO - ====== WebDriver manager ======
+2025-03-12 04:31:11,829 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:31:14,224 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:31:17,222 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:31:59,069 - ERROR - Error decoding JSON from S3: Extra data: line 1 column 3 (char 2)
+2025-03-12 04:32:36,914 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:32:39,448 - INFO - Found 102 new car listings.
+2025-03-12 04:33:28,229 - INFO - ====== WebDriver manager ======
+2025-03-12 04:33:29,496 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:33:31,527 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:33:35,612 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:35:23,163 - ERROR - Error decoding JSON from S3: Extra data: line 1 column 3 (char 2)
+2025-03-12 04:35:50,595 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:35:51,442 - INFO - Found 52 new car listings.
+2025-03-12 04:36:22,838 - INFO - ====== WebDriver manager ======
+2025-03-12 04:36:24,109 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:36:25,941 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:36:27,393 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:37:01,588 - ERROR - Error decoding JSON from S3: Extra data: line 1 column 4 (char 3)
+2025-03-12 04:37:32,030 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:37:33,297 - INFO - Found 87 new car listings.
+2025-03-12 04:40:40,588 - INFO - ====== WebDriver manager ======
+2025-03-12 04:40:41,841 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:40:43,813 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:40:47,307 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:43:12,687 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:43:13,788 - INFO - Found 102 new car listings.
+2025-03-12 04:44:24,909 - INFO - ====== WebDriver manager ======
+2025-03-12 04:44:26,230 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:44:27,364 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:44:28,539 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:45:38,406 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 04:45:39,684 - INFO - Found 120 new car listings.
+2025-03-12 04:47:07,229 - INFO - ====== WebDriver manager ======
+2025-03-12 04:47:08,504 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:47:09,641 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:47:10,781 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 04:55:46,832 - INFO - ====== WebDriver manager ======
+2025-03-12 04:55:48,107 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:55:52,238 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 04:55:54,488 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:03:17,141 - INFO - ====== WebDriver manager ======
+2025-03-12 05:03:18,416 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:03:19,565 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:03:20,716 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:04:09,218 - INFO - ====== WebDriver manager ======
+2025-03-12 05:04:10,614 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:04:11,754 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:04:12,893 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:04:49,534 - ERROR - Error loading data from S3: Extra data: line 2 column 1 (char 6)
+2025-03-12 05:06:01,808 - INFO - ====== WebDriver manager ======
+2025-03-12 05:06:03,066 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:06:04,191 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:06:05,335 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:06:41,074 - ERROR - JSON Decode Error: Extra data: line 2 column 1 (char 6)
+2025-03-12 05:07:59,928 - INFO - ====== WebDriver manager ======
+2025-03-12 05:08:01,166 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:08:02,321 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:08:03,466 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:08:35,625 - ERROR - Error loading data from S3: An error occurred (NoSuchKey) when calling the GetObject operation: Object not found
+2025-03-12 05:09:05,528 - INFO - ====== WebDriver manager ======
+2025-03-12 05:09:06,756 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:09:09,030 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:09:10,174 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:09:42,349 - ERROR - Error loading data from S3: An error occurred (NoSuchKey) when calling the GetObject operation: Object not found
+2025-03-12 05:11:04,195 - INFO - ====== WebDriver manager ======
+2025-03-12 05:11:05,469 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:11:06,624 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:11:07,765 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:12:30,627 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:12:31,735 - INFO - Found 102 new car listings.
+2025-03-12 05:12:44,042 - INFO - ====== WebDriver manager ======
+2025-03-12 05:12:45,314 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:12:46,465 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:12:47,637 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:17:25,086 - INFO - ====== WebDriver manager ======
+2025-03-12 05:17:26,353 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:17:27,500 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:17:28,632 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:18:40,901 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:18:42,671 - INFO - Found 120 new car listings.
+2025-03-12 05:20:23,625 - INFO - ====== WebDriver manager ======
+2025-03-12 05:20:24,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:20:26,096 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:20:27,251 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:21:34,549 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:21:43,756 - INFO - Found 102 new car listings.
+2025-03-12 05:21:49,627 - INFO - ====== WebDriver manager ======
+2025-03-12 05:21:50,891 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:21:52,497 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:21:54,297 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:23:03,876 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:23:05,225 - INFO - Found 102 new car listings.
+2025-03-12 05:23:38,975 - INFO - ====== WebDriver manager ======
+2025-03-12 05:23:40,226 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:23:41,395 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:23:42,534 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:24:46,288 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:24:47,370 - INFO - Found 102 new car listings.
+2025-03-12 05:33:43,394 - INFO - ====== WebDriver manager ======
+2025-03-12 05:33:44,688 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:33:45,843 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:33:46,972 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:34:52,336 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:35:57,264 - INFO - Found 120 new car listings.
+2025-03-12 05:37:48,755 - INFO - ====== WebDriver manager ======
+2025-03-12 05:37:50,028 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:37:51,500 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:37:52,617 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:38:55,118 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:38:56,306 - INFO - Found 102 new car listings.
+2025-03-12 05:39:22,612 - INFO - ====== WebDriver manager ======
+2025-03-12 05:39:23,860 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:39:25,297 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:39:26,451 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:40:10,659 - INFO - ====== WebDriver manager ======
+2025-03-12 05:40:11,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:40:13,087 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:40:14,214 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:41:25,872 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:41:27,031 - INFO - Found 91 new car listings.
+2025-03-12 05:43:33,962 - INFO - ====== WebDriver manager ======
+2025-03-12 05:43:35,258 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:43:36,417 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:43:37,539 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:46:45,042 - INFO - ====== WebDriver manager ======
+2025-03-12 05:46:46,321 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:46:47,477 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:46:48,634 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:47:52,055 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:47:53,150 - INFO - Found 102 new car listings.
+2025-03-12 05:52:16,446 - INFO - ====== WebDriver manager ======
+2025-03-12 05:52:17,691 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:52:19,959 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 05:52:22,408 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 05:54:29,291 - INFO - Email sent to vharbarynin@gmail.com
+2025-03-12 05:54:30,319 - INFO - Found 102 new car listings.
+2025-03-12 06:00:06,432 - INFO - ====== WebDriver manager ======
+2025-03-12 06:00:07,734 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 06:00:08,858 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-12 06:00:10,000 - INFO - Driver [C:\Users\Administrator\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/chromedriver.exe] found in cache
+2025-03-12 06:01:06,706 - INFO - Found 0 new car listings.

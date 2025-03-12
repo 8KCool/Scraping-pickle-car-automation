@@ -10,6 +10,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import boto3
+from botocore.exceptions import ClientError
+from io import BytesIO
 
 # Set up logging
 logging.basicConfig(
@@ -18,19 +21,32 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
-# JSON File name to save the previous scraped data into local storage
-STORE_JSON_FILE = "filter1.json"
+# S3 configuration
+S3_ENDPOINT = "https://sgxwytdltbcyszbliqdh.supabase.co/storage/v1/s3"
+ACCESS_KEY_ID = "f480c9a90d378a5052193f7d60055781"
+SECRET_ACCESS_KEY = "ac68a84bcf6de0206fd523b71988a35d61c41973ceb276a8d7ddf75a12df4d51"
+BUCKET_NAME = "scrap-json"
+FILE_NAME = "filter1.json"
+
+# Create an S3 client
+s3_client = boto3.client(
+    "s3",
+    endpoint_url=S3_ENDPOINT,
+    aws_access_key_id=ACCESS_KEY_ID,
+    aws_secret_access_key=SECRET_ACCESS_KEY,
+)
+
 
 # Filter URL to scrap the cars data
 URL = "https://www.pickles.com.au/used/search/lob/cars-motorcycles/cars/state/qld?contentkey=all-cars&filter=and%255B0%255D%255Bprice%255D%255Ble%255D%3D30000%26and%255B1%255D%255Bor%255D%255B0%255D%255BbuyMethod%255D%3DBuy%2520Now%26and%255B1%255D%255Bor%255D%255B1%255D%255BbuyMethod%255D%3DEOI%26and%255B1%255D%255Bor%255D%255B2%255D%255BbuyMethod%255D%3DPickles%2520Online"
+SENDER_PASSWORD = "tdao tbew tmya bizf"  # Update with your sender email password
+RECEIVER_EMAIL = "vharbarynin@gmail.com"
+SENDER_EMAIL = "vharbarynin@gmail.com"  # Update with your sender email
 
 
 # Email credentials (use your actual email and password)
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SENDER_EMAIL = "vharbarynin@gmail.com"  # Update with your sender email
-SENDER_PASSWORD = "tdao tbew tmya bizf"  # Update with your sender email password
-RECEIVER_EMAIL = "vharbarynin@gmail.com"
 
 
 # Function to send the email
@@ -49,25 +65,56 @@ def send_email(subject, body):
         server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
         server.close()
         logging.info(f"Email sent to {RECEIVER_EMAIL}")
-        print(f"✅ Email sent to {RECEIVER_EMAIL}")
     except Exception as e:
         logging.error(f"Error sending email: {e}")
-        print(f"❌ Error sending email: {e}")
 
 
-# Function to load previous scraped data
-def load_previous_data(filename=STORE_JSON_FILE):
+def load_previous_data():
     try:
-        with open(filename, "r") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
+        print(f"Attempting to load data from S3: {BUCKET_NAME}/{FILE_NAME}")
+        response = s3_client.get_object(Bucket=BUCKET_NAME, Key=FILE_NAME)
+        print(f"S3 Response: {response}")
+
+        content = response["Body"].read()
+        print(f"Content length: {len(content)} bytes")
+
+        decoded_content = content.decode("utf-8")
+
+        start = decoded_content.find('[')  # Find the first occurrence of '['
+        end = decoded_content.rfind(']')  # Find the last occurrence of ']'
+
+        if start != -1 and end != -1:
+            json_data = decoded_content[start:end+1]  # Extract the substring between the brackets
+            parsed_data = json.loads(json_data)
+            print(f"Successfully parsed JSON. Number of items: {len(parsed_data)}")
+
+            return parsed_data
+        else:
+            print("Valid JSON not found in input.")
+    except ClientError as e:
+        if e.response["Error"]["Code"] == "NoSuchKey":
+            print(f"No previous data found in S3: {FILE_NAME}")
+            return []
+        else:
+            print(f"ClientError when loading data from S3: ")
+            return []
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON from S3: ")
+        return []
+    except Exception as e:
+        print(f"Unexpected error loading data from S3: {type(e).__name__}:")
         return []
 
 
-# Function to save the current scrape to a file
-def save_scraped_data(data, filename=STORE_JSON_FILE):
-    with open(filename, "w") as file:
-        json.dump(data, file)
+# Function to save the current scrape to S3
+def save_scraped_data(data):
+    try:
+        json_string = json.dumps(data, separators=(",", ":"))
+        s3_client.put_object(Body=json_string, Bucket=BUCKET_NAME, Key=FILE_NAME)
+        print(f"Data saved to S3 bucket: {BUCKET_NAME}/{FILE_NAME}")
+    except Exception as e:
+        logging.error(f"Error saving data to S3: {e}")
+        print(f"Error saving data to S3: ")
 
 
 # Set up Selenium WebDriver
@@ -132,7 +179,7 @@ while True:
             )
 
         except Exception as e:
-            print(f"Error extracting data: {e}")
+            print(f"Error extracting data:")
 
     # Find and click the "Next" button (if available)
     try:
@@ -147,7 +194,7 @@ while True:
             print("Scraping finished.")
             break
     except Exception as e:
-        print(f"No more pages or error finding next button: {e}")
+        print(f"No more pages or error finding next button:")
         break
 
 # Close the browser
@@ -164,12 +211,11 @@ if new_data:
     for car in new_data:
         email_body += f"Title: {car['Title']}\nSubTitle: {car['SubTitle']}\nPrice: {car['Price']}\nLocation: {car['Location']}\nURL: {car['URL']}\n\n"
 
-    print(f"email-content {email_body} ")
-
     send_email("New Car Found", email_body)
 
-    # Update the stored data with the new list
+    # Update the stored data in Supabase
     save_scraped_data(car_data)
+
 
 # Optionally log and print how many new items were scraped
 logging.info(f"Found {len(new_data)} new car listings.")
