@@ -20,21 +20,18 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install selenium webdriver-manager pandas openpyxl
+          pip install selenium webdriver-manager pandas smtplib
 
       - name: Install Google Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-          
-      - name: Debug Directory Structure
-        run: ls -R
-        
-      - name: Run Scraper
-        run: python Scraping-pickle-car-automation/pickle-scrapp.py  # Updated path
 
-      - name: Upload Scraped Data
+      - name: Run Scraper
+        run: python Scraping-pickle-car-automation/pickle-scrapp.py
+
+      - name: Upload Scraped Data (For Logging)
         uses: actions/upload-artifact@v4  # Use v4 instead of v3
         with:
           name: scraped-data
-          path: repairable_writeoff_cars.xlsx
+          path: scraper.log
