@@ -31,7 +31,7 @@ jobs:
         run: ls -R
         
       - name: Run Scraper
-        run: python pickle-srapp.py
+        run: python Scraping-pickle-car-automation/pickle-scrapp.py  # Updated path
 
       - name: Upload Scraped Data
         uses: actions/upload-artifact@v4  # Use v4 instead of v3
