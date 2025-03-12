@@ -21,6 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install selenium webdriver-manager pandas
+          pip install boto3  # Install boto3
 
       - name: Install Google Chrome
         run: |
