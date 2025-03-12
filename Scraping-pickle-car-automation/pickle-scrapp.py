@@ -5,7 +5,41 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import logging
+
+# Set up logging
+logging.basicConfig(filename="scraper.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Email credentials (use your actual email and password)
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+SENDER_EMAIL = "your-email@gmail.com"  # Update with your sender email
+SENDER_PASSWORD = "your-email-password"  # Update with your sender email password
+RECEIVER_EMAIL = "8klancer@gmail.com"
+
+# Function to send the email
+def send_email(subject, body):
+    msg = MIMEMultipart()
+    msg['From'] = SENDER_EMAIL
+    msg['To'] = RECEIVER_EMAIL
+    msg['Subject'] = subject
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()  # Secure the connection
+        server.login(SENDER_EMAIL, SENDER_PASSWORD)
+        server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
+        server.close()
+        logging.info(f"Email sent to {RECEIVER_EMAIL}")
+        print(f"✅ Email sent to {RECEIVER_EMAIL}")
+    except Exception as e:
+        logging.error(f"Error sending email: {e}")
+        print(f"❌ Error sending email: {e}")
 
 # Set up Selenium WebDriver
 options = webdriver.ChromeOptions()
@@ -34,7 +68,8 @@ while True:
 
     # Find all car listings on the current page
     cars = driver.find_elements(By.CSS_SELECTOR, ".content-grid_gridCard__vWoIs")
-    print(cars.__len__())
+    print(f"Found {len(cars)} cars on this page.")
+    
     for car in cars:
         try:
             title = car.find_element(
@@ -90,10 +125,14 @@ while True:
 # Close the browser
 driver.quit()
 
-# Save data to an Excel file
+# Format the scraped data for email
+scraped_data = ""
+for car in car_data:
+    scraped_data += f"Title: {car['Title']}\nSubTitle: {car['SubTitle']}\nPrice: {car['Price']}\nLocation: {car['Location']}\nURL: {car['URL']}\n\n"
 
-print(f"car_data length: {len(car_data)}")
-df = pd.DataFrame(car_data)
-df.to_excel("repairable_writeoff_cars.xlsx", index=False)
+# Send the email with the scraped data
+send_email("Scraped Car Listings", scraped_data)
 
-print("✅ Data successfully scraped and saved!")
+# Optionally log and print how many items were scraped
+logging.info(f"Scraped {len(car_data)} car listings.")
+print(f"Scraped {len(car_data)} car listings.")
