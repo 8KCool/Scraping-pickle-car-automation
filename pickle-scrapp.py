@@ -16,8 +16,8 @@ logging.basicConfig(filename="scraper.log", level=logging.INFO, format="%(asctim
 # Email credentials (use your actual email and password)
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SENDER_EMAIL = "8klancer@gmail.com"  # Update with your sender email
-SENDER_PASSWORD = "asdfgASDFG123!@#"  # Update with your sender email password
+SENDER_EMAIL = "vharbarynin@gmail.com"  # Update with your sender email
+SENDER_PASSWORD = "tdao tbew tmya bizf"  # Update with your sender email password
 RECEIVER_EMAIL = "vharbarynin@gmail.com"
 
 # Function to send the email
