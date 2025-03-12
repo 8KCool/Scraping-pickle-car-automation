@@ -26,7 +26,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-
+          
+      - name: Debug Directory Structure
+        run: ls -R
+        
       - name: Run Scraper
         run: python pickle-srapp.py
 
